@@ -18,12 +18,6 @@ install() {
   [ "x86_64" = "$(uname -m)" ] && arch="x64"
   [ "aarch64" = "$(uname -m)" ] && arch="aarch64"
 
-  local version filename url
-  version="$1"
-  filename="$2"
-  platform="$3"
-  arch="$4"
-
   url="https://github.com/Jarred-Sumner/bun/releases/download/${version}/bun-${platform}-${arch}.zip"
   
   mkdir -p "${bin_install_path}"
